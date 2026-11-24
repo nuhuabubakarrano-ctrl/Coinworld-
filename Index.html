@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoinWorld</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080808;
+ color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px;
+ border-bottom:1px solid #333;
+ color:#f2c232;
+ font-size:27px;
+ font-weight:bold;
+}
+main{padding:22px;max-width:850px;margin:auto}
+.hero{
+ background:#171717;
+ border:1px solid #70591b;
+ border-radius:18px;
+ padding:25px;
+ margin-top:25px;
+}
+h1{font-size:35px}
+.gold{color:#f2c232}
+p{color:#bbb;line-height:1.6}
+button{
+ background:#f2c232;
+ border:0;
+ padding:14px 22px;
+ border-radius:9px;
+ font-weight:bold;
+ cursor:pointer;
+}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:15px;
+ margin-top:25px;
+}
+.card{
+ background:#171717;
+ border:1px solid #333;
+ padding:20px;
+ border-radius:13px;
+}
+.card h2{color:#f2c232}
+.task{
+ background:#171717;
+ padding:18px;
+ margin:12px 0;
+ border-radius:12px;
+ border:1px solid #333;
+}
+footer{
+ text-align:center;
+ padding:30px;
+ color:#888;
+}
+</style>
+</head>
+<body>
+
+<header>◇ CoinWorld</header>
+
+<main>
+<div class="hero">
+<h1>Earn through <span class="gold">real tasks.</span></h1>
+<p>Complete eligible tasks and earn rewards transparently.</p>
+<button onclick="document.getElementById('tasks').scrollIntoView()">Explore Tasks</button>
+</div>
+
+<div class="cards">
+<div class="card">
+<p>Wallet Balance</p>
+<h2>0.00 USDT</h2>
+</div>
+<div class="card">
+<p>Tasks Completed</p>
+<h2>0</h2>
+</div>
+</div>
+
+<section id="tasks">
+<h2>Available Tasks</h2>
+
+<div class="task">
+<h3>🎥 Watch Videos</h3>
+<p>Watch approved partner videos.</p>
+</div>
+
+<div class="task">
+<h3>📝 Complete Surveys</h3>
+<p>Complete eligible surveys.</p>
+</div>
+
+<div class="task">
+<h3>👥 Referral Program</h3>
+<p>Invite friends to CoinWorld.</p>
+</div>
+
+<div class="task">
+<h3>📅 Daily Check-in</h3>
+<p>Check in daily to earn rewards.</p>
+</div>
+</section>
+
+<footer>
+© 2026 CoinWorld. All Rights Reserved.
+</footer>
+</main>
+
+</body>
+  </html>
