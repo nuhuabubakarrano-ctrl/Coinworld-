@@ -200,3 +200,273 @@ function changeLanguage() {
     document.getElementById("taskButton").innerText = "Duba Ayyuka";
     document.getElementById("refTitle").innerText = "👥 Gayyata";
     document.getElementById("refText").innerText = "
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoinWorld - Earn Rewards</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #080e1c;
+  color: white;
+}
+
+header {
+  background: #14223b;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #36d6a5;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.language, .action {
+  background: #36d6a5;
+  color: #080e1c;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px;
+}
+
+.welcome {
+  margin: 25px 0;
+}
+
+.balance {
+  background: linear-gradient(135deg,#116b59,#14223b);
+  padding: 28px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.balance h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #14223b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #253957;
+}
+
+.card h3 {
+  color: #36d6a5;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #bdc8dc;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.wallet {
+  margin-top: 25px;
+  background: #14223b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.wallet p {
+  margin-top: 12px;
+  color: #bdc8dc;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #8794aa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌍 CoinWorld</div>
+  <button class="language" onclick="changeLanguage()">Hausa</button>
+</header>
+
+<div class="container">
+
+  <div class="welcome">
+    <h2 id="welcome">Welcome to CoinWorld!</h2>
+    <p id="subtitle">Your rewards dashboard</p>
+  </div>
+
+  <div class="balance">
+    <p id="balanceTitle">Your Demo Points</p>
+    <h2 id="points">0 CW</h2>
+    <p>Demo points — not real money</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3 id="earnTitle">🎁 Earn Rewards</h3>
+      <p id="earnText">Complete activities and collect demo points.</p>
+      <button class="action" onclick="demoTask()" id="earnButton">
+        Try Demo
+      </button>
+    </div>
+
+    <div class="card">
+      <h3 id="taskTitle">📋 Daily Tasks</h3>
+      <p id="taskText">Discover activities on CoinWorld.</p>
+      <button class="action" onclick="showTasks()" id="taskButton">
+        View Tasks
+      </button>
+    </div>
+
+    <div class="card">
+      <h3 id="refTitle">👥 Referral</h3>
+      <p id="refText">Invite friends when the referral system is ready.</p>
+      <button class="action" onclick="showReferral()" id="refButton">
+        Invite Friends
+      </button>
+    </div>
+
+  </div>
+
+  <div class="wallet">
+    <h2 id="walletTitle">💳 Wallet</h2>
+    <p id="walletText">
+      Wallet and withdrawals are coming soon.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 CoinWorld. All Rights Reserved.
+  <p>Demo platform — no real payments yet.</p>
+</footer>
+
+<script>
+
+let points = 0;
+let hausa = false;
+
+function demoTask() {
+  points += 10;
+
+  document.getElementById("points").innerText =
+    points + " CW";
+
+  alert(hausa
+    ? "Ka samu maki 10 na gwaji!"
+    : "You earned 10 demo points!");
+}
+
+function showTasks() {
+  alert(hausa
+    ? "Sabbin ayyuka suna zuwa nan gaba!"
+    : "More tasks are coming soon!");
+}
+
+function showReferral() {
+  alert(hausa
+    ? "Tsarin gayyata yana zuwa nan gaba!"
+    : "Referral system coming soon!");
+}
+
+function changeLanguage() {
+
+  hausa = !hausa;
+
+  const text = {
+    en: {
+      welcome: "Welcome to CoinWorld!",
+      subtitle: "Your rewards dashboard",
+      balance: "Your Demo Points",
+      earn: "🎁 Earn Rewards",
+      earnText: "Complete activities and collect demo points.",
+      earnButton: "Try Demo",
+      task: "📋 Daily Tasks",
+      taskText: "Discover activities on CoinWorld.",
+      taskButton: "View Tasks",
+      ref: "👥 Referral",
+      refText: "Invite friends when the referral system is ready.",
+      refButton: "Invite Friends",
+      wallet: "💳 Wallet",
+      walletText: "Wallet and withdrawals are coming soon."
+    },
+
+    ha: {
+      welcome: "Barka da zuwa CoinWorld!",
+      subtitle: "Shafin ladan ka",
+      balance: "Makin Gwaji naka",
+      earn: "🎁 Samun Lada",
+      earnText: "Kammala ayyuka ka tara maki.",
+      earnButton: "Gwada",
+      task: "📋 Ayyukan Yau",
+      taskText: "Duba ayyukan CoinWorld.",
+      taskButton: "Duba Ayyuka",
+      ref: "👥 Gayyata",
+      refText: "Tsarin gayyata yana zuwa nan gaba.",
+      refButton: "Gayyato Abokai",
+      wallet: "💳 Wallet",
+      walletText: "Tsarin wallet da cire kuɗi yana zuwa nan gaba."
+    }
+  };
+
+  const t = hausa ? text.ha : text.en;
+
+  document.getElementById("welcome").innerText = t.welcome;
+  document.getElementById("subtitle").innerText = t.subtitle;
+  document.getElementById("balanceTitle").innerText = t.balance;
+  document.getElementById("earnTitle").innerText = t.earn;
+  document.getElementById("earnText").innerText = t.earnText;
+  document.getElementById("earnButton").innerText = t.earnButton;
+  document.getElementById("taskTitle").innerText = t.task;
+  document.getElementById("taskText").innerText = t.taskText;
+  document.getElementById("taskButton").innerText = t.taskButton;
+  document.getElementById("refTitle").innerText = t.ref;
+  document.getElementById("refText").innerText = t.refText;
+  document.getElementById("refButton").innerText = t.refButton;
+  document.getElementById("walletTitle").innerText = t.wallet;
+  document.getElementById("walletText").innerText = t.walletText;
+
+  document.querySelector(".language").innerText =
+    hausa ? "English" : "Hausa";
+}
+
+</script>
+
+</body>
+</html>
